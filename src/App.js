@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <!-- Game setup start --> */}
+      Select Theme Numbers Icons Number of Players 1 2 3 4 Grid Size 4x4 6x6
+      Start Game
+      {/* <!-- Game setup end --> */}
+      {/* <!-- Game board start --> */}
+      Restart New Game
+      {/* <!-- Multiplayer scores start --> */}
+      Player 1{/* <!-- P1 score --> */}
+      Current Turn Player 2{/* <!-- P2 score --> */}
+      Current Turn Player 3{/* <!-- P3 score --> */}
+      Current Turn Player 4{/* <!-- P4 score --> */}
+      Current Turn
+      {/* <!-- Multiplayer scores start --> */}
+      {/* <!-- Solo game time and moves counter start --> */}
+      Time
+      {/* <!-- Time elapsed --> */}
+      Moves
+      {/* <!-- Moves total --> */}
+      {/* <!-- Solo game time and moves counter end --> */}
+      {/* <!-- Game board end --> */}
+    </>
   );
-}
+};
 
 export default App;
