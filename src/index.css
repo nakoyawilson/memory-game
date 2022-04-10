@@ -11,6 +11,8 @@
   --off-white1: rgb(242, 242, 242);
   --off-white2: rgb(223, 231, 236);
   --white: rgb(252, 252, 252);
+  --black: rgb(0, 0, 0);
+  --black-transparent: rgba(0, 0, 0, 0.5);
 }
 
 /* CSS Reset */
@@ -43,6 +45,15 @@ button {
   border: none;
   background: none;
   font: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: block;
+  width: 100%;
 }
 
 /* Shared Styles */
