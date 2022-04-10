@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@700&display=swap");
+
+:root {
+  --font: "Atkinson Hyperlegible", sans-serif;
+  --orange: rgb(253, 162, 20);
+  --pale-blue: rgb(186, 206, 217);
+  --medium-blue1: rgb(113, 145, 165);
+  --medium-blue2: rgb(99, 149, 185);
+  --dark-blue1: rgb(48, 72, 89);
+  --dark-blue2: rgb(21, 41, 56);
+  --off-white: rgb(242, 242, 242);
+  --white: rgb(252, 252, 252);
+}
+
+/* CSS Reset */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font);
+  font-weight: 700;
+}
+
+img {
+  display: block;
+}
+
+button {
+  border: none;
+  background: none;
+  font: inherit;
+}
+
+/* Shared Styles */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}

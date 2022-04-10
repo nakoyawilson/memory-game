@@ -1,0 +1,80 @@
+.setup-game {
+  background-color: var(--dark-blue2);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.setup-game .logo {
+  width: 12.2rem;
+  margin: 8rem auto 0;
+}
+
+.setup-form {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 2.4rem;
+  width: min(87.2%, 32.7rem);
+  margin: 4.5rem auto;
+}
+
+.question-wrapper {
+  margin-bottom: 2.4rem;
+}
+
+.question-wrapper:last-of-type {
+  margin-bottom: 3.2rem;
+}
+
+.question-heading {
+  font-weight: inherit;
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+  color: var(--medium-blue1);
+  margin-bottom: 1.1rem;
+}
+
+.label-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+label {
+  flex-grow: 1;
+}
+
+.form-label {
+  display: block;
+  background-color: var(--pale-blue);
+  color: var(--white);
+  border-radius: 26px;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.radio-button:checked + .form-label {
+  background-color: var(--dark-blue1);
+}
+
+.radio-button:focus + .form-label {
+  outline: 1px solid var(--orange);
+}
+
+.start-btn {
+  display: block;
+  width: 100%;
+  padding: 1.2rem 1.2rem 1.4rem;
+  /* margin-top: 3.2rem; */
+  background: var(--orange);
+  border-radius: 26px;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  text-align: center;
+  color: var(--white);
+}

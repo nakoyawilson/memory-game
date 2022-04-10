@@ -3,26 +3,26 @@ import uuid from "react-uuid";
 import {
   faAnchor,
   faAppleWhole,
-  faBaseballBatBall,
   faBasketShopping,
+  faBug,
   faCandyCane,
   faCar,
   faFlask,
+  faFutbol,
   faGhost,
   faGift,
   faHandSpock,
   faPenNib,
   faPuzzlePiece,
   faRocket,
-  faScroll,
   faSnowflake,
   faSun,
   faUmbrella,
 } from "@fortawesome/free-solid-svg-icons";
-import "./App.css";
 import { faMoon } from "@fortawesome/free-regular-svg-icons";
 import GameSetupForm from "./components/GameSetupForm";
 import SingleCard from "./components/SingleCard";
+import "./App.css";
 
 const themes = {
   numbers: [
@@ -54,16 +54,16 @@ const themes = {
     { value: faCar, matched: false },
     { value: faSnowflake, matched: false },
     { value: faAppleWhole, matched: false },
-    { value: faBaseballBatBall, matched: false },
     { value: faBasketShopping, matched: false },
     { value: faCandyCane, matched: false },
     { value: faGift, matched: false },
     { value: faPenNib, matched: false },
     { value: faPuzzlePiece, matched: false },
-    { value: faScroll, matched: false },
     { value: faUmbrella, matched: false },
     { value: faRocket, matched: false },
     { value: faGhost, matched: false },
+    { value: faBug, matched: false },
+    { value: faFutbol, matched: false },
   ],
 };
 

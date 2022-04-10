@@ -1,49 +1,105 @@
+import logo from "../assets/logo-light.svg";
+import "./GameSetupForm.css";
+
 const GameSetupForm = ({ setupGame }) => {
   return (
-    <form onSubmit={setupGame}>
-      <div>
-        <span>Select Theme</span>
-        <label>
-          <input type="radio" name="theme" value="numbers" defaultChecked />
-          <span>Numbers</span>
-        </label>
-        <label>
-          <input type="radio" name="theme" value="icons" />
-          <span>Icons</span>
-        </label>
-      </div>
-      <div>
-        <span>Number of Players</span>
-        <label>
-          <input type="radio" name="players" value="1" defaultChecked />
-          <span>1</span>
-        </label>
-        <label>
-          <input type="radio" name="players" value="2" />
-          <span>2</span>
-        </label>
-        <label>
-          <input type="radio" name="players" value="3" />
-          <span>3</span>
-        </label>
-        <label>
-          <input type="radio" name="players" value="4" />
-          <span>4</span>
-        </label>
-      </div>
-      <div>
-        <span>Grid Size</span>
-        <label>
-          <input type="radio" name="grid" value="4" defaultChecked />
-          <span>4x4</span>
-        </label>
-        <label>
-          <input type="radio" name="grid" value="6" />
-          <span>6x6</span>
-        </label>
-      </div>
-      <button>Start Game</button>
-    </form>
+    <section className="setup-game">
+      <h1 className="visually-hidden">Memory Game</h1>
+      <img src={logo} className="logo" alt="Memory game logo" />
+      <form onSubmit={setupGame} className="setup-form">
+        <div className="question-wrapper">
+          <h2 className="question-heading">Select Theme</h2>
+          <div className="label-container">
+            <label>
+              <input
+                type="radio"
+                name="theme"
+                value="numbers"
+                defaultChecked
+                className="visually-hidden radio-button"
+              />
+              <span className="form-label">Numbers</span>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="theme"
+                value="icons"
+                className="visually-hidden radio-button"
+              />
+              <span className="form-label">Icons</span>
+            </label>
+          </div>
+        </div>
+        <div className="question-wrapper">
+          <h2 className="question-heading">Number of Players</h2>
+          <div className="label-container">
+            <label>
+              <input
+                type="radio"
+                name="players"
+                value="1"
+                defaultChecked
+                className="visually-hidden radio-button"
+              />
+              <span className="form-label">1</span>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="players"
+                value="2"
+                className="visually-hidden radio-button"
+              />
+              <span className="form-label">2</span>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="players"
+                value="3"
+                className="visually-hidden radio-button"
+              />
+              <span className="form-label">3</span>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="players"
+                value="4"
+                className="visually-hidden radio-button"
+              />
+              <span className="form-label">4</span>
+            </label>
+          </div>
+        </div>
+        <div className="question-wrapper">
+          <h2 className="question-heading">Grid Size</h2>
+          <div className="label-container">
+            <label>
+              <input
+                type="radio"
+                name="grid"
+                value="4"
+                defaultChecked
+                className="visually-hidden radio-button"
+              />
+              <span className="form-label">4x4</span>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="grid"
+                value="6"
+                className="visually-hidden radio-button"
+              />
+              <span className="form-label">6x6</span>
+            </label>
+          </div>
+        </div>
+        <button className="start-btn">Start Game</button>
+      </form>
+    </section>
   );
 };
 
