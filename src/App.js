@@ -21,8 +21,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faMoon } from "@fortawesome/free-regular-svg-icons";
 import GameSetupForm from "./components/GameSetupForm";
-import SingleCard from "./components/SingleCard";
 import "./App.css";
+import GameBoard from "./components/GameBoard";
+import Header from "./components/Header";
 
 const themes = {
   numbers: [
@@ -68,6 +69,7 @@ const themes = {
 };
 
 const App = () => {
+  const [showStartModal, setShowStartModal] = useState(true);
   const [cardTheme, setCardTheme] = useState(null);
   const [numPlayers, setNumPlayers] = useState(null);
   const [gridSize, setGridSize] = useState(null);
@@ -95,6 +97,7 @@ const App = () => {
       setChoiceOne(null);
       setChoiceTwo(null);
       setNumMoves(0);
+      setShowStartModal(false);
     };
     if (cardTheme && gridSize) {
       shuffleCards();
@@ -130,48 +133,19 @@ const App = () => {
 
   return (
     <>
-      <GameSetupForm setupGame={setupGame} />
-      {/* <!-- Game board start --> */}
-      {cards && <div>Restart New Game</div>}
-      <div
-        className={`game-grid ${
-          gridSize === "4" ? "four-by-four" : "six-by-six"
-        }`}
-      >
-        {cards &&
-          cards.map((card) => (
-            <SingleCard
-              key={card.id}
-              cardTheme={cardTheme}
-              card={card}
-              cardDisabled={cardDisabled}
-              handleCardChoice={handleCardChoice}
-              cardFlipped={
-                card === choiceOne || card === choiceTwo || card.matched
-              }
-            />
-          ))}
-      </div>
-      {numPlayers && numPlayers !== "1" && (
-        <div>
-          {/* <!-- Multiplayer scores start --> */}
-          Player 1{/* <!-- P1 score --> */}
-          Current Turn Player 2{/* <!-- P2 score --> */}
-          Current Turn Player 3{/* <!-- P3 score --> */}
-          Current Turn Player 4{/* <!-- P4 score --> */}
-          Current Turn
-          {/* <!-- Multiplayer scores start --> */}
-        </div>
-      )}
-      {numPlayers === "1" && (
-        <div>
-          {/* <!-- Time elapsed -->  */}
-          Time
-          {/* <!-- Moves total --> */}
-          Moves: {numMoves}
-        </div>
-      )}
-      {/* <!-- Game board end --> */}
+      <Header />
+      <GameBoard
+        cards={cards}
+        numPlayers={numPlayers}
+        gridSize={gridSize}
+        cardTheme={cardTheme}
+        cardDisabled={cardDisabled}
+        handleCardChoice={handleCardChoice}
+        choiceOne={choiceOne}
+        choiceTwo={choiceTwo}
+        numMoves={numMoves}
+      />
+      <GameSetupForm setupGame={setupGame} showStartModal={showStartModal} />
     </>
   );
 };

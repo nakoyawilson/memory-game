@@ -1,10 +1,9 @@
 import logo from "../assets/logo-light.svg";
 import "./GameSetupForm.css";
 
-const GameSetupForm = ({ setupGame }) => {
+const GameSetupForm = ({ setupGame, showStartModal }) => {
   return (
-    <section className="setup-game">
-      <h1 className="visually-hidden">Memory Game</h1>
+    <section className={`setup-game ${showStartModal ? "show" : ""}`}>
       <img src={logo} className="logo" alt="Memory game logo" />
       <form onSubmit={setupGame} className="setup-form">
         <div className="question-wrapper">

@@ -5,6 +5,13 @@
   position: fixed;
   top: 0;
   left: 0;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in;
+  z-index: 10;
+}
+
+.setup-game.show {
+  transform: translateY(0);
 }
 
 .setup-game .logo {
@@ -70,7 +77,6 @@ label {
   display: block;
   width: 100%;
   padding: 1.2rem 1.2rem 1.4rem;
-  /* margin-top: 3.2rem; */
   background: var(--orange);
   border-radius: 26px;
   font-size: 1.8rem;

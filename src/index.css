@@ -8,7 +8,8 @@
   --medium-blue2: rgb(99, 149, 185);
   --dark-blue1: rgb(48, 72, 89);
   --dark-blue2: rgb(21, 41, 56);
-  --off-white: rgb(242, 242, 242);
+  --off-white1: rgb(242, 242, 242);
+  --off-white2: rgb(223, 231, 236);
   --white: rgb(252, 252, 252);
 }
 
@@ -31,6 +32,7 @@ html {
 body {
   font-family: var(--font);
   font-weight: 700;
+  background-color: var(--white);
 }
 
 img {

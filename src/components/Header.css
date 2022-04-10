@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+  width: min(87.2%, 32.7rem);
+  margin: 2.4rem auto 0;
+}
+
+.header .logo {
+  width: 9.2rem;
+}
+
+.navigation-btn {
+  background-color: var(--orange);
+  font-size: 1.6rem;
+  line-height: 2rem;
+  text-align: center;
+  color: var(--white);
+  padding: 1rem 1.85rem;
+  border-radius: 26px;
+}
+
+nav {
+  display: none;
+}

@@ -15,7 +15,11 @@ const SingleCard = ({
   };
   return (
     <div className="card">
-      <div className={cardFlipped ? "flipped" : ""}>
+      <div
+        className={`${cardFlipped ? "flipped" : ""} ${
+          card.matched ? "matched" : ""
+        }`}
+      >
         <span className="card-front">
           {cardTheme === "icons" ? (
             <FontAwesomeIcon icon={card.value} />
