@@ -35,6 +35,7 @@ body {
   font-family: var(--font);
   font-weight: 700;
   background-color: var(--white);
+  min-height: 100vh;
 }
 
 img {
